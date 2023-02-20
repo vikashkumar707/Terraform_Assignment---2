@@ -1,0 +1,3 @@
+variable "ownername" {
+  type = string
+}

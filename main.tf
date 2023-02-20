@@ -31,16 +31,6 @@ resource "aws_subnet" "vikash-public-2" {
 }
 
 
-# Creating Internet Gateway in AWS VPC
-resource "aws_internet_gateway" "vikash-gw" {
-  vpc_id = aws_vpc.vikash.id
-
-  tags = {
-    Name = "Vikash"
-  }
-}
-
-
 # Creating EC2 instances in public subnets
 resource "aws_instance" "public_inst_1" {
   ami           = "ami-0e742cca61fb65051"
